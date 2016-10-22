@@ -1,0 +1,38 @@
+.judul {
+    float: left !important;
+    width: 95% !important;
+    margin-left: 10px !important;
+}
+.sharethis {
+    float: left !important;
+    width: 97% !important;
+    padding-left: 0px !important;
+padding-bottom:10px !important;
+}
+#main-artikel {
+    overflow: hidden;
+    font-size: 14px;
+    width: 98%;
+    margin-left: 10px;
+margin-bottom:20px;
+    line-height: 23px;
+    padding-top: 10px;
+}
+#deskripsi, #review, .deskripsi, .gambar-hidden{display:none !important;}
+.tag-article {display:none;}
+.review {display:block !important;}
+.kolom {margin-left:10px !important;}
+@media screen and max-device-width480px {
+    .judul {
+        float: left !important;
+        width: 90% !important;
+    padding:0px 5%;
+        margin-left: 10px !important;
+    }
+    .sharethis {
+        float: left !important;
+        width: 100% !important;
+        padding-left: 0px !important;
+    padding-bottom:10px !important;
+    }
+}
