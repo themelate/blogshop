@@ -64,13 +64,13 @@ function cekHarga(){
 	}
 
 	var courier = $('#ekspedisi').val();
+	var paket  = $('#typepaket').val();
 	if(courier != '1')
 	{
 		$.ajax({
 			type: 'GET',
 			url:'https://files.themelate.com/process.php?act=cost',
-			dataType:'jsonp',
-			data:{origin:origin,destination:destination,weight:berat,courier:courier},
+			data:{origin:origin,destination:destination,weight:berat,courier:courier,paket:paket},
 			success:function(response){
 				//$("#ongkir").val('0');
 				$('#data-shipping').html(response);
