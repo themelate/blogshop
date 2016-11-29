@@ -1,15 +1,15 @@
 // functtion for rajaongkir
 $(document).ready(function(){
-	loadProvinsi('#oriprovince');
-	$('#oriprovince').change(function(){
-		$('#oricity').show();
-		var idprovince = $('#oriprovince').val();
-		loadCity(idprovince,'#oricity')
+	loadProvinsi('#desprovince');
+	$('#desprovince').change(function(){
+		$('#descity').show();
+		var idprovince = $('#desprovince').val();
+		loadCity(idprovince,'#descity')
 	});
 });
 
 function loadProvinsi(id){
-	$('#oricity').hide();
+	$('#descity').hide();
 	$(id).html('loading...');
 	$.ajax({
 		type: 'GET',
@@ -48,6 +48,38 @@ function loadCity(idprovince,id){
 			$(id).html('ERROR');
 		}
 	});
+}
+
+function cekHarga(){
+	var origin = $('#oricity').val();
+	var destination = $('#descity').val();
+	var weight = $('#jumlah_berat').html();
+	if(weight == 0)
+	{
+		var berat = 100;
+	}
+	else
+	{
+		var berat = parseInt(weight)*1000;
+	}
+
+	var courier = $('#ekspedisi').val();
+	if(courier != '1')
+	{
+		$.ajax({
+			type: 'GET',
+			url:'https://files.themelate.com/process.php?act=cost',
+			dataType:'jsonp',
+			data:{origin:origin,destination:destination,weight:berat,courier:courier},
+			success:function(response){
+				//$("#ongkir").val('0');
+				$('#data-shipping').html(response);
+			},
+			error:function(){
+				$('#data-shipping').html('ERROR');
+			}
+		});
+	}
 }
 // function for shopping cart
 function scs()
