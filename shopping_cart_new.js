@@ -1,54 +1,54 @@
 // functtion for rajaongkir
-$(document).ready(function(){
-	loadProvinsi('#oriprovince');
-	$('#oriprovince').change(function(){
-		$('#oricity').show();
-		var idprovince = $('#oriprovince').val();
-		loadCity(idprovince,'#oricity')
-	});
-});
+// $(document).ready(function(){
+// 	loadProvinsi('#oriprovince');
+// 	$('#oriprovince').change(function(){
+// 		$('#oricity').show();
+// 		var idprovince = $('#oriprovince').val();
+// 		loadCity(idprovince,'#oricity')
+// 	});
+// });
 
-function loadProvinsi(id){
-	$('#oricity').hide();
-	$(id).html('loading...');
-	$.ajax({
-		type: 'GET',
-		url:'http://files.themelate.com/process.php?act=showprovince',
-		dataType:'jsonp',
-		success:function(response){
-			$(id).html('');
-			province = '';
-				$.each(response['rajaongkir']['results'], function(i,n){
-					province = '<option value="'+n['province_id']+'">'+n['province']+'</option>';
-					province = province + '';
-					$(id).append(province);
-				});
-		},
-		error:function(){
-			$(id).html('ERROR');
-		}
-	});
-}
-function loadCity(idprovince,id){
-	$.ajax({
-		type: 'GET',
-		url:'http://files.themelate.com/process.php?act=showcity',
-		dataType:'jsonp',
-		data:{province:idprovince},
-		success:function(response){
-			$(id).html('');
-			city = '';
-				$.each(response['rajaongkir']['results'], function(i,n){
-					city = '<option value="'+n['city_id']+'">'+n['city_name']+'</option>';
-					city = city + '';
-					$(id).append(city);
-				});
-		},
-		error:function(){
-			$(id).html('ERROR');
-		}
-	});
-}
+// function loadProvinsi(id){
+// 	$('#oricity').hide();
+// 	$(id).html('loading...');
+// 	$.ajax({
+// 		type: 'GET',
+// 		url:'http://files.themelate.com/process.php?act=showprovince',
+// 		dataType:'jsonp',
+// 		success:function(response){
+// 			$(id).html('');
+// 			province = '';
+// 				$.each(response['rajaongkir']['results'], function(i,n){
+// 					province = '<option value="'+n['province_id']+'">'+n['province']+'</option>';
+// 					province = province + '';
+// 					$(id).append(province);
+// 				});
+// 		},
+// 		error:function(){
+// 			$(id).html('ERROR');
+// 		}
+// 	});
+// }
+// function loadCity(idprovince,id){
+// 	$.ajax({
+// 		type: 'GET',
+// 		url:'http://files.themelate.com/process.php?act=showcity',
+// 		dataType:'jsonp',
+// 		data:{province:idprovince},
+// 		success:function(response){
+// 			$(id).html('');
+// 			city = '';
+// 				$.each(response['rajaongkir']['results'], function(i,n){
+// 					city = '<option value="'+n['city_id']+'">'+n['city_name']+'</option>';
+// 					city = city + '';
+// 					$(id).append(city);
+// 				});
+// 		},
+// 		error:function(){
+// 			$(id).html('ERROR');
+// 		}
+// 	});
+// }
 // function for shopping cart
 function scs()
 {
