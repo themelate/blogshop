@@ -23,9 +23,6 @@ function loadProvinsi(id){
 					province = province + '';
 					$(id).append(province);
 				});
-		},
-		error:function(){
-			$(id).html('ERROR');
 		}
 	});
 }
