@@ -12,6 +12,7 @@ function loadProvinsi(id){
 	$('#oricity').hide();
 	$(id).html('loading...');
 	$.ajax({
+		type: 'GET',
 		url:'http://files.themelate.com/process.php?act=showprovince',
 		dataType:'jsonp',
 		success:function(response){
@@ -30,6 +31,7 @@ function loadProvinsi(id){
 }
 function loadCity(idprovince,id){
 	$.ajax({
+		type: 'GET',
 		url:'http://files.themelate.com/process.php?act=showcity',
 		dataType:'jsonp',
 		data:{province:idprovince},
