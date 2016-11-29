@@ -73,6 +73,7 @@ function cekHarga(){
 			data:{origin:origin,destination:destination,weight:berat,courier:courier,paket:paket},
 			success:function(response){
 				//$("#ongkir").val('0');
+				alert(response);
 				$('#data-shipping').html(response);
 			},
 			error:function(){
