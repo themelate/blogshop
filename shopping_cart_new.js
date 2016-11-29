@@ -118,6 +118,7 @@ function shopping_cart (step) {
 			$("[name='smanagerurltoko']").val(url);
 			// open tab
 			$('#pemesanan').show();
+			$('#shipping').hide();
 			$('#mycart').hide();
 			$('#pembayaran').hide();
 		}
