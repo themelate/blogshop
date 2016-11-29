@@ -15,6 +15,7 @@ function loadProvinsi(id){
 		url:'http://files.themelate.com/process.php?act=showprovince',
 		dataType:'json',
 		success:function(response){
+			alert(response);
 			$(id).html('');
 			province = '';
 				$.each(response['rajaongkir']['results'], function(i,n){
