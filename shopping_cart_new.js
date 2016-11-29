@@ -72,8 +72,9 @@ function cekHarga(){
 			url:'https://files.themelate.com/process.php?act=cost',
 			data:{origin:origin,destination:destination,weight:berat,courier:courier,paket:paket},
 			success:function(response){
+				response.replace(/"/g,'');
 				//$("#ongkir").val('0');
-				alert(response);
+				//alert(response);
 				$('#data-shipping').html(response);
 			},
 			error:function(){
