@@ -1,22 +1,15 @@
 
 $(document).ready(function(){
 	loadProvinsi('#oriprovince');
-	loadProvinsi('#desprovince');
 	$('#oriprovince').change(function(){
 		$('#oricity').show();
 		var idprovince = $('#oriprovince').val();
 		loadCity(idprovince,'#oricity')
 	});
-	$('#desprovince').change(function(){
-		$('#descity').show();
-		var idprovince = $('#desprovince').val();
-		loadCity(idprovince,'#descity')
-	});
 });
 
 function loadProvinsi(id){
 	$('#oricity').hide();
-	$('#descity').hide();
 	$(id).html('loading...');
 	$.ajax({
 		url:'http://files.themelate.com/process.php?act=showprovince',
