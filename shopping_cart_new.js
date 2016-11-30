@@ -76,6 +76,8 @@ function cekHarga(){
 				//$("#ongkir").val('0');
 				//alert(response);
 				$('#data-shipping').html(response);
+				// update item element
+				simpleCart.updatePageElements();
 			},
 			error:function(){
 				$('#data-shipping').html('ERROR');
