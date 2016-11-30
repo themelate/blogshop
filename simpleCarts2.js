@@ -295,10 +295,10 @@ function cart( email , matauang) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalShip();
 		}
-		var x=0,element,elements = getElementsByClassName('simpleCart_total_cart');
+		var x=0,element,elements = getElementsByClassName('simpleCart_orders');
 		for( x=0;x<elements.length;x++) {
 			element = elements[x];
-			element.innerHTML = this.returnTotalShip();
+			element.innerHTML = this.returnTotalOrder();
 		}
 		x=0;
 		elements = getElementsByClassName('simpleCart_quantity');
