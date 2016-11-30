@@ -301,7 +301,7 @@ function cart( email , matauang) {
 		x=0;elements = getElementsByClassName('simpleCart_orders');
 		for( x=0;x<elements.length;x++) {
 			element = elements[x];
-			element.innerHTML = this.returnTotalOrder;
+			element.innerHTML = this.returnTotalOrder();
 		}
 		x=0;
 		elements = getElementsByClassName('simpleCart_quantity');
