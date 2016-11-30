@@ -69,6 +69,7 @@ function cekHarga(){
 				dataType:'jsonp',
 				data:{origin:origin,destination:destination,weight:berat,courier:courier,paket:paket},
 				success:function(response){
+					console.log(response);
 					//response.replace(/"/g,'');
 					//$("#ongkir").val('0');
 					//alert(response);
