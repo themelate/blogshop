@@ -39,7 +39,7 @@ function cart( email , matauang) {
 	this.totalPrice		= 0.00;
 	this.totalWeight	= 0.0;
 	this.totalShip		= ongkir;
-	this.totalOrder 	= 100.00;
+	this.totalOrder 	= 0.00;
 	this.items 		= new Array();
 	this.userEmail 		= email;
 	// order of columns, you change the order here or by accessing the value in your html
@@ -290,15 +290,18 @@ function cart( email , matauang) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalPrice();
 		}
-		x=0;elements = getElementsByClassName('simpleCart_orders');
+		x=0;elements = getElementsByClassName('simpleCart_shipping');
 		for( x=0;x<elements.length;x++) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalShip();
 		}
-		x=0;elements = getElementsByClassName('simpleCart_shipping');
+		// cek total order
+		if(this.totalPrice == 0.00) { this.totalOrder = 0.00; }
+		else {this.totalOrder = parseInt(this.totalPrice)+parseInt(this.totalShip);}
+		x=0;elements = getElementsByClassName('simpleCart_orders');
 		for( x=0;x<elements.length;x++) {
 			element = elements[x];
-			element.innerHTML = 'Woiiiii';
+			element.innerHTML = this.returnTotalOrder;
 		}
 		x=0;
 		elements = getElementsByClassName('simpleCart_quantity');
