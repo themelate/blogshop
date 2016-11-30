@@ -34,13 +34,13 @@ function formatNumber(number)
     return x1;
 }
 function cart( email , matauang) {
-	var ongkir 			= $("[name='smanagerongkir']").val();
+	var ongkir 		= $("[name='smanagerongkir']").val();
 	this.totalItems 	= 0;
 	this.totalPrice		= 0.00;
 	this.totalWeight	= 0.0;
 	this.totalShip		= ongkir;
 	this.totalOrder 	= 100.00;
-	this.items 			= new Array();
+	this.items 		= new Array();
 	this.userEmail 		= email;
 	// order of columns, you change the order here or by accessing the value in your html
 	this.ItemColumns = ['Image','Name','Price','Quantity','Weight','Total','Remove'];
@@ -290,12 +290,12 @@ function cart( email , matauang) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalPrice();
 		}
-		var x=0,element,elements = getElementsByClassName('simpleCart_shipping');
+		elements = getElementsByClassName('simpleCart_shipping');
 		for( x=0;x<elements.length;x++) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalShip();
 		}
-		var x=0,element,elements = getElementsByClassName('simpleCart_orders');
+		elements = getElementsByClassName('simpleCart_orders');
 		for( x=0;x<elements.length;x++) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalOrder();
