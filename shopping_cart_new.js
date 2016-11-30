@@ -68,10 +68,18 @@ function cekHarga(){
 				url:'https://files.themelate.com/process.php?act=cost',
 				data:{origin:origin,destination:destination,weight:berat,courier:courier,paket:paket},
 				success:function(response){
-					response.replace(/"/g,'');
+					//response.replace(/"/g,'');
 					//$("#ongkir").val('0');
 					//alert(response);
-					$('#data-shipping').html(response);
+					$('#data-shipping').html('');
+					ongkir = '';
+						$.each(response['rajaongkir']['costs'], function(i,n){
+							ongkir = n['service']+' => '+n['cost']['value']+'<br>';
+							ongkir = ongkir + '';
+							$('#data-shipping').append(ongkir);
+						});
+					
+					//$('#data-shipping').html(response);
 					// update item element
 					simpleCart.updatePageElements();
 				},
