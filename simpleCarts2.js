@@ -298,7 +298,7 @@ function cart( email , matauang) {
 		var x=0,element,elements = getElementsByClassName('simpleCart_total_cart');
 		for( x=0;x<elements.length;x++) {
 			element = elements[x];
-			element.innerHTML = this.returnTotalOrder();
+			element.innerHTML = this.returnTotalShip();
 		}
 		x=0;
 		elements = getElementsByClassName('simpleCart_quantity');
