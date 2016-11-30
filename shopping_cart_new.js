@@ -74,7 +74,7 @@ function cekHarga(){
 					//alert(response);
 					$('#data-shipping').html('');
 					ongkir = '';
-						$.each(response['rajaongkir']['costs'], function(i,n){
+						$.each(response['costs'], function(i,n){
 							ongkir = n['service']+' => '+n['cost']['value']+'<br>';
 							ongkir = ongkir + '';
 							$('#data-shipping').append(ongkir);
