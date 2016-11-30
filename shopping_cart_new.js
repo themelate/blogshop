@@ -61,8 +61,7 @@ function cekHarga(){
 
 		var courier = $('#ekspedisi').val();
 		var paket  = $('#typepaket').val();
-		alert(destination);
-		if(destination != null)
+		if(destination != 'Kota / Kabupaten')
 		{
 			$.ajax({
 				type: 'GET',
