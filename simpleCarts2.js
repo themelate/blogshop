@@ -34,9 +34,11 @@ function formatNumber(number)
     return x1;
 }
 function cart( email , matauang) {
+	var ongkir 			= $("[name='smanagerongkir']").val();
 	this.totalItems 	= 0;
 	this.totalPrice		= 0.00;
 	this.totalWeight	= 0.0;
+	this.totalShip		= ongkir;
 	this.items 			= new Array();
 	this.userEmail 		= email;
 	// order of columns, you change the order here or by accessing the value in your html
@@ -287,6 +289,11 @@ function cart( email , matauang) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalPrice();
 		}
+		var x=0,element,elements = getElementsByClassName('simpleCart_shipping');
+		for( x=0;x<elements.length;x++) {
+			element = elements[x];
+			element.innerHTML = this.returnTotalShip();
+		}
 		x=0;
 		elements = getElementsByClassName('simpleCart_quantity');
 		for( x=0;x<elements.length;x++) {
@@ -445,6 +452,10 @@ function cart( email , matauang) {
 	// return the cart total 
 	this.returnTotalWeight = function() {
 		return this.returnFormattedWeight( this.totalWeight );	
+	};
+	// return the ongkir 
+	this.returnTotalShip = function() {
+		return this.returnFormattedPrice( this.totalShip );	
 	};
 	// return a price with the format $xxx.xx
 	this.returnFormattedPrice = function( price ) {
