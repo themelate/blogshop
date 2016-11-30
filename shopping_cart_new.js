@@ -51,38 +51,36 @@ function loadCity(idprovince,id){
 }
 
 function cekHarga(){
-	var origin = $('#oricity').val();
-	var destination = $('#descity').val();
-	var weight = $('#jumlah_berat').html();
-	if(weight == 0)
-	{
-		var berat = 100;
-	}
-	else
-	{
-		var berat = parseInt(weight)*1000;
-	}
+	var cekshipping = $('#pengiriman').val();
+	if(pengiriman == "yes") {
+		var origin = $('#oricity').val();
+		var destination = $('#descity').val();
+		var weight = $('#jumlah_berat').html();
+		if(weight == 0) {var berat = 100;}
+		else {var berat = parseInt(weight)*1000;}
 
-	var courier = $('#ekspedisi').val();
-	var paket  = $('#typepaket').val();
-	if(courier != '1')
-	{
-		$.ajax({
-			type: 'GET',
-			url:'https://files.themelate.com/process.php?act=cost',
-			data:{origin:origin,destination:destination,weight:berat,courier:courier,paket:paket},
-			success:function(response){
-				response.replace(/"/g,'');
-				//$("#ongkir").val('0');
-				//alert(response);
-				$('#data-shipping').html(response);
-				// update item element
-				simpleCart.updatePageElements();
-			},
-			error:function(){
-				$('#data-shipping').html('ERROR');
-			}
-		});
+		var courier = $('#ekspedisi').val();
+		var paket  = $('#typepaket').val();
+		alert(destination);
+		if(destination != null)
+		{
+			$.ajax({
+				type: 'GET',
+				url:'https://files.themelate.com/process.php?act=cost',
+				data:{origin:origin,destination:destination,weight:berat,courier:courier,paket:paket},
+				success:function(response){
+					response.replace(/"/g,'');
+					//$("#ongkir").val('0');
+					//alert(response);
+					$('#data-shipping').html(response);
+					// update item element
+					simpleCart.updatePageElements();
+				},
+				error:function(){
+					$('#data-shipping').html('ERROR');
+				}
+			});
+		}
 	}
 }
 // function for shopping cart
