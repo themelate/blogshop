@@ -431,7 +431,7 @@ function cart( email , matauang) {
 						}
 					}
 					if( this.ItemColumns[i] == 'Name' ) {
-						tempCell.innerHTML = tempItem.getValue('name');
+						tempCell.innerHTML = "<b>"+tempItem.getValue('name')+"</b>"+check_null(tempItem.getValue('type'))+check_null(tempItem.getValue('color'));
 					} else if (	this.ItemColumns[i] == 'Price' ) {
 						tempCell.innerHTML = this.returnFormattedPrice( tempItem.getValue('price'));
 					} else if (	this.ItemColumns[i] == 'Quantity' ) {
