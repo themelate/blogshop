@@ -66,6 +66,7 @@ function cekHarga(){
 			$.ajax({
 				type: 'GET',
 				url:'https://files.themelate.com/process.php?act=cost',
+				dataType:'jsonp',
 				data:{origin:origin,destination:destination,weight:berat,courier:courier,paket:paket},
 				success:function(response){
 					//response.replace(/"/g,'');
