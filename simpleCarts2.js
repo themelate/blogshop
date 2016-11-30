@@ -347,13 +347,13 @@ function cart( email , matauang) {
 					} else if ( this.ItemColumns[i] == 'Options' && this.options() ) {
 						tempCell.innerHTML = tempItem.optionList();
 					} else if (	this.ItemColumns[i] == 'Quantity' ) {
-						tempCell.innerHTML = '<input type="number" onblur="simpleCart.updateQuantity(' + tempItem.functionString() +',\'new_quantity=\' + this.value);return false;"value="' + tempItem.getValue('quantity') + '" />';
+						tempCell.innerHTML = '<input type="number" onblur="simpleCart.updateQuantity(' + tempItem.functionString() +',\'new_quantity=\' + this.value);cekHarga();return false;"value="' + tempItem.getValue('quantity') + '" />';
 					} else if (	this.ItemColumns[i] == 'Weight' ) {
 						tempCell.innerHTML = this.returnFormattedWeight( tempItem.getValue('weight'))+" kg";
 					} else if (	this.ItemColumns[i] == 'Total' ) {
 						tempCell.innerHTML = this.returnFormattedPrice( tempItem.getValue('quantity')* tempItem.getValue('price') );
 					} else if (	this.ItemColumns[i] == 'Remove' ) {
-						tempCell.innerHTML = '<a class="removeButton" onclick="simpleCart.updateQuantity(' + tempItem.functionString() +',\'new_quantity=0\');return false;">Remove</a>';
+						tempCell.innerHTML = '<a class="removeButton" onclick="simpleCart.updateQuantity(' + tempItem.functionString() +',\'new_quantity=0\');cekHarga();return false;">Remove</a>';
 					}
 					newRow.appendChild(tempCell);
 				}
