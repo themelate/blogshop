@@ -180,8 +180,11 @@ function shopping_cart (step) {
 	{
 		// jika item kosong tidak bisa ke pemesanan
 		var item_cart = document.getElementById("jumlah_item");
+		var cek_ongkir = document.getElementById("ongkir");
 		if(item_cart.innerHTML == "0") {
 			alert("Your cart is empty!");
+		} else if(cek_ongkir.value == "0") {
+			alert("Please select your courier!");
 		} else {
 			$('#mycart').hide();
 			$('#shipping').show();
