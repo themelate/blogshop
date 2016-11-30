@@ -52,7 +52,7 @@ function loadCity(idprovince,id){
 
 function cekHarga(){
 	var cekshipping = $('#pengiriman').val();
-	if(pengiriman == "yes") {
+	if(cekshipping == "yes") {
 		var origin = $('#oricity').val();
 		var destination = $('#descity').val();
 		var weight = $('#jumlah_berat').html();
