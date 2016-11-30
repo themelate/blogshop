@@ -39,7 +39,7 @@ function cart( email , matauang) {
 	this.totalPrice		= 0.00;
 	this.totalWeight	= 0.0;
 	this.totalShip		= ongkir;
-	this.totalOrder 	= parseInt(totalPrice)+parseInt(ongkir);
+	this.totalOrder 	= ongkir;
 	this.items 			= new Array();
 	this.userEmail 		= email;
 	// order of columns, you change the order here or by accessing the value in your html
