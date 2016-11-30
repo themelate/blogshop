@@ -290,15 +290,15 @@ function cart( email , matauang) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalPrice();
 		}
-		elements = getElementsByClassName('simpleCart_shipping');
+		x=0;elements = getElementsByClassName('simpleCart_shipping');
 		for( x=0;x<elements.length;x++) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalShip();
 		}
-		elements = getElementsByClassName('simpleCart_orders');
+		x=0;elements = getElementsByClassName('simpleCart_orders');
 		for( x=0;x<elements.length;x++) {
 			element = elements[x];
-			element.innerHTML = this.returnTotalOrder();
+			element.innerHTML = 'Woiiiii';
 		}
 		x=0;
 		elements = getElementsByClassName('simpleCart_quantity');
