@@ -88,6 +88,7 @@ function scs()
 	simpleCart.empty();
 	$('#pembayaran').show();
 	$('#pemesanan').hide();
+	$('#shipping').hide();
 	$('#mycart').hide();
 }
 function opensucces() {
@@ -129,6 +130,10 @@ $(document).ready(function(){
 		var smanagertotal      			= $("[name='smanagertotal']").val();
 		var smanageremail    			= cartEmail;
 		var smanagerisicart    			= $("[name='smanagerisicart']").val();
+		var smanagerongkir    			= $("[name='smanagerongkir']").val();
+		// dari kota
+		// ke kota
+		// ekspedisi
 		var smanagerpaymin    			= $("[name='smanagerpaymin']").val();
 		var smanagerlanguage			= $("[name='smanagerlanguage']").val();
 		var smanagertitel	       		= $("[name='smanagertitel']").val();
@@ -173,26 +178,30 @@ function shopping_cart (step) {
 	}
   else if(step == "shipping")
 	{
-		$('#mycart').hide();
-		$('#shipping').show();
-		$('#pemesanan').hide();
-		$('#pembayaran').hide();
+		// jika item kosong tidak bisa ke pemesanan
+		var item_cart = document.getElementById("jumlah_item");
+		if(item_cart.innerHTML == "0") {
+			alert("Your cart is empty!");
+		} else {
+			$('#mycart').hide();
+			$('#shipping').show();
+			$('#pemesanan').hide();
+			$('#pembayaran').hide();	
+		}
 	}
 	else if(step == "pemesanan")
 	{
 		// jika item kosong tidak bisa ke pemesanan
 		var item_cart = document.getElementById("jumlah_item");
-		if(item_cart.innerHTML == "0")
-		{
+		if(item_cart.innerHTML == "0") {
 			alert("Your cart is empty!");
-		}
-		else 
-		{
+		} else {
 			// get detail
 			var detail_cart 		= document.getElementById("tableCart");
+			var detail_total 		= document.getElementById("tableTotal");
 			var detail_payment 		= document.getElementById("cart-payment");
-			var order_total_count 	= document.getElementById("cart_total");
-			$("[name='smanagerisicart']").val(detail_cart.innerHTML);
+			var order_total_count 		= document.getElementById("cart_total");
+			$("[name='smanagerisicart']").val(detail_cart.innerHTML+detail_total.innerHTML);
 			$("[name='smanagerpaymin']").val(detail_payment.innerHTML);
 			$("[name='smanagertotal']").val(order_total_count.innerHTML);
 			// get url
