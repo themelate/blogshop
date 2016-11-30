@@ -39,8 +39,18 @@ function cart( email , matauang) {
 	this.totalPrice		= 0.00;
 	this.totalWeight	= 0.0;
 	this.totalShip		= ongkir;
+	this.totalOrder 	= 0.00;
 	this.items 			= new Array();
 	this.userEmail 		= email;
+	// total price after ongkir
+	if(this.totalPrice == 0.00)
+	{
+		this.totalOrder 	= 0.00;
+	}
+	else
+	{
+		this.totalOrder 	= this.totalPrice+ongkir;
+	}
 	// order of columns, you change the order here or by accessing the value in your html
 	this.ItemColumns = ['Image','Name','Price','Quantity','Weight','Total','Remove'];
 	
@@ -294,6 +304,11 @@ function cart( email , matauang) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalShip();
 		}
+		var x=0,element,elements = getElementsByClassName('simpleCart_total_cart');
+		for( x=0;x<elements.length;x++) {
+			element = elements[x];
+			element.innerHTML = this.returnTotalOrder();
+		}
 		x=0;
 		elements = getElementsByClassName('simpleCart_quantity');
 		for( x=0;x<elements.length;x++) {
@@ -456,6 +471,10 @@ function cart( email , matauang) {
 	// return the ongkir 
 	this.returnTotalShip = function() {
 		return this.returnFormattedPrice( this.totalShip );	
+	};
+	// return the order 
+	this.returnTotalOrder = function() {
+		return this.returnFormattedPrice( this.totalOrder );	
 	};
 	// return a price with the format $xxx.xx
 	this.returnFormattedPrice = function( price ) {
