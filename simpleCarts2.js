@@ -34,11 +34,10 @@ function formatNumber(number)
     return x1;
 }
 function cart( email , matauang) {
-	var ongkir 		= $("[name='smanagerongkir']").val();
 	this.totalItems 	= 0;
 	this.totalPrice		= 0.00;
 	this.totalWeight	= 0.0;
-	this.totalShip		= ongkir;
+	this.totalShip		= 0.00;
 	this.totalOrder 	= 0.00;
 	this.items 		= new Array();
 	this.userEmail 		= email;
@@ -290,6 +289,9 @@ function cart( email , matauang) {
 			element = elements[x];
 			element.innerHTML = this.returnTotalPrice();
 		}
+		// cek ongkir
+		var ongkir 		= $("[name='smanagerongkir']").val();
+		this.totalShip 		= ongkir;
 		x=0;elements = getElementsByClassName('simpleCart_shipping');
 		for( x=0;x<elements.length;x++) {
 			element = elements[x];
