@@ -15,7 +15,9 @@ function showpageCount(json) {
     var downPageHtml = '';
     for (var i = 0, post; post = json.feed.entry[i]; i++) {
         var timestamp1 = post.published.$t.substring(0, 19) + post.published.$t.substring(23, 29);
-        timestamp = encodeURIComponent(timestamp1);
+        timestamp2 = encodeURIComponent(timestamp1);
+        var timestamp = timestamp2.split(':').join('%3A');
+        alert(timestamp);
         var title = post.title.$t;
         if (title != '') {
             if (itemCount == 0 || (itemCount % pageCount == (pageCount - 1))) {
