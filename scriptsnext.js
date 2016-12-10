@@ -1,5 +1,6 @@
-var home_page_urls = location.href;
-var home_page_url = home_page_urls.replace('&m=1', '');
+var home_page_url1 = location.href;
+var home_page_url2 = home_page_url1.replace('&m=1', '');
+var home_page_url = home_page_url2.split(':').join('%3A');
 alert(home_page_url);
 
 function showpageCount(json) {
@@ -15,9 +16,7 @@ function showpageCount(json) {
     var downPageHtml = '';
     for (var i = 0, post; post = json.feed.entry[i]; i++) {
         var timestamp1 = post.published.$t.substring(0, 19) + post.published.$t.substring(23, 29);
-        timestamp2 = encodeURIComponent(timestamp1);
-        var timestamp = timestamp2.split(':').join('%3A');
-        alert(timestamp);
+        timestamp = encodeURIComponent(timestamp1);
         var title = post.title.$t;
         if (title != '') {
             if (itemCount == 0 || (itemCount % pageCount == (pageCount - 1))) {
