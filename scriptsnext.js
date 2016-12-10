@@ -1,5 +1,5 @@
-var home_page_url = location.href;
-home_page_url.replace("&m=1", "");
+var home_page_urls = location.href;
+var home_page_url = home_page_urls.replace('&m=1', '');
 alert(home_page_url);
 
 function showpageCount(json) {
