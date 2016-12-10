@@ -1,7 +1,6 @@
 var home_page_url1 = location.href;
 var home_page_url2 = home_page_url1.replace('&m=1', '');
 var home_page_url = home_page_url2.split(':').join('%3A');
-alert(home_page_url);
 
 function showpageCount(json) {
     var thisUrl = home_page_url;
