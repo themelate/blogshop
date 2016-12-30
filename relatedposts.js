@@ -15,7 +15,7 @@ try
 
 catch (error){
 s=entry.content.$t;a=s.indexOf("<img");b=s.indexOf("src=\"",a);c=s.indexOf("\"",b+5);d=s.substr(b+5,c-b-5);if((a!=-1)&&(b!=-1)&&(c!=-1)&&(d!="")){
-thumburl[relatedTitlesNum]=d;} else thumburl[relatedTitlesNum]='https://lh3.googleusercontent.com/-5nN713vw5Jw/UGsVkxK48zI/AAAAAAAAASc/NrbFPV9wSbg/h180/no_image.jpg';
+thumburl[relatedTitlesNum]=d;} else thumburl[relatedTitlesNum]='https://2.bp.blogspot.com/-bX096QqmRzE/WGapPMCVGmI/AAAAAAAAAik/Rhf5Wteq1yYtL__4TuO1UpwpySDpibZhgCLcB/s1600/no-image.png';
 
 
 
