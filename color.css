@@ -1,0 +1,26 @@
+/* brown */
+.brown ::selection{background:#C2A773;}
+.brown #navbar-wrap {border-bottom:#C2A773 solid 4px;}
+.brown .chat-icon {background-color:#C2A773;border:#C2A773 solid 1px;}
+.brown .shopping-cart-logo {background-color:#C2A773;}
+.brown .addtocart:hover {background:#C2A773 !important;}
+.brown .itemPrice, .brown .cart-wrap .itemTotal {color:#C2A773;}
+.brown .btncheck {background:#C2A773 !important}
+.brown .simpleCart_empty {background:#333 !important}
+.brown [value^=&#39;Order Now&#39;] {background:#C2A773 !important}
+.brown .judul h1 {color:#C2A773}
+.brown .default {color:#C2A773}
+.brown a:link, .brown a:visited {color:#444;}
+.brown .flex-control-paging li a:hover, .brown .flex-control-paging li a.flex-active {background:#C2A773;}
+.brown .flex-next:hover, .brown .flex-prev:hover {background-color:#C2A773;}
+.brown .button:hover, .brown .active {background:#C2A773}
+.brown .buy-area .buy {background:#C2A773;}
+.brown .tag-article {background:#C2A773;}
+.brown .navbar li a:hover, .brown .secondary-menu li a:hover,.brown .primary-menu li a:hover,.brown .side-top li a:hover, .brown .side-pop li a:hover {color:#C2A773;}
+.brown .menu-navbar li a:hover,.brown .menu-navbar li span, .brown .menu-home:hover {background:#C2A773}
+.brown .notifLbl {background:#C2A773;}
+.brown .harga {color:#C2A773;}
+.brown .PopularPosts .item-snippet {color:#C2A773;}
+.brown .top:hover {background-color:#C2A773;}
+.brown .showpagePoint {border:1px solid #C2A773;background:#C2A773;}
+.brown #related-posts h4:before, .brown #sidebar-wrapper h3:before, .brown #sidebar-wrapper h2:before, .brown #produk-populer  h2:before,.brown #produk-populer h3:before,.brown .ind h2:before, .brown .ind h3:before {background:#C2A773;}
