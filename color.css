@@ -24,3 +24,29 @@
 .brown .top:hover {background-color:#C2A773;}
 .brown .showpagePoint {border:1px solid #C2A773;background:#C2A773;}
 .brown #related-posts h4:before, .brown #sidebar-wrapper h3:before, .brown #sidebar-wrapper h2:before, .brown #produk-populer  h2:before,.brown #produk-populer h3:before,.brown .ind h2:before, .brown .ind h3:before {background:#C2A773;}
+/* blue */
+.blue ::selection{background:#1cb9c8;}
+.blue #navbar-wrap {border-bottom:#1cb9c8 solid 4px;}
+.blue .chat-icon {background-color:#1cb9c8;border:#1cb9c8 solid 1px;}
+.blue .addtocart:hover {background:#1cb9c8 !important;}
+.blue .shopping-cart-logo {background-color:#1cb9c8;}
+.blue .itemPrice, .blue .cart-wrap .itemTotal {color:#1cb9c8;}
+.blue .btncheck {background:#1cb9c8 !important}
+.blue .simpleCart_empty {background:#333 !important}
+.blue [value^=&#39;Order Now&#39;] {background:#1cb9c8 !important}
+.blue .judul h1 {color:#1cb9c8}
+.blue .default {color:#1cb9c8}
+.blue a:link, .blue a:visited {color:#444;}
+.blue .flex-control-paging li a:hover, .blue .flex-control-paging li a.flex-active {background:#1cb9c8;}
+.blue .flex-next:hover, .blue .flex-prev:hover {background-color:#1cb9c8;}
+.blue .button:hover, .blue .active {background:#1cb9c8}
+.blue .buy-area .buy {background:#1cb9c8;}
+.blue .tag-article {background:#1cb9c8;}
+.blue .navbar li a:hover, .blue .secondary-menu li a:hover,.blue .primary-menu li a:hover,.blue .side-top li a:hover, .blue .side-pop li a:hover {color:#1cb9c8;}
+.blue .menu-navbar li a:hover,.blue .menu-navbar li span, .blue .menu-home:hover {background:#1cb9c8}
+.blue .notifLbl {background:#1cb9c8;}
+.blue .harga {color:#1cb9c8;}
+.blue .PopularPosts .item-snippet {color:#1cb9c8;}
+.blue .top:hover {background-color:#1cb9c8;}
+.blue .showpagePoint {border:1px solid #1cb9c8;background:#1cb9c8;}
+.blue #related-posts h4:before, .blue #sidebar-wrapper h3:before, .blue #sidebar-wrapper h2:before, .blue #produk-populer  h2:before,.blue #produk-populer h3:before,.blue .ind h2:before, .blue .ind h3:before {background:#0ea1af;}
