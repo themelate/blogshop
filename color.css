@@ -50,3 +50,5 @@
 .blue .top:hover {background-color:#1cb9c8;}
 .blue .showpagePoint {border:1px solid #1cb9c8;background:#1cb9c8;}
 .blue #related-posts h4:before, .blue #sidebar-wrapper h3:before, .blue #sidebar-wrapper h2:before, .blue #produk-populer  h2:before,.blue #produk-populer h3:before,.blue .ind h2:before, .blue .ind h3:before {background:#0ea1af;}
+
+.scart a:link, .scart a:visited, .scart a:hover {color: #ffffff;}
