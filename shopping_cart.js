@@ -4,6 +4,7 @@ function scs()
 	$('#pembayaran').show();
 	$('#pemesanan').hide();
 	$('#mycart').hide();
+	//test
 }
 function opensucces() {
   var $_GET = {};
